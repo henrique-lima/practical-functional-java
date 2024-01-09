@@ -8,7 +8,6 @@ import java.util.List;
 import org.junit.Ignore;
 import org.junit.Test;
 
-@Ignore
 public class StreamTest {
 
     @Test
@@ -27,7 +26,7 @@ public class StreamTest {
         
         String answer = se.calculateOrderSummary(Arrays.asList(getOrder1(), getOrder2()));
         
-        String expected = "Fred ordered 3 Baseball Bat and 1 Catcher's Glove\n"
+        String expected = "Fred ordered 3 Baseball Bat and 1 Catcher's Glove and 1 Baseball Shirt\n"
                 + "Barney ordered 2 Baseball Bat and 1 Pitcher's Glove";
         
         assertThat(answer).isEqualTo(expected);
@@ -52,11 +51,17 @@ public class StreamTest {
                 .withProductName("Catcher's Glove")
                 .withQuantity(1)
                 .build();
+
+        Product p3 = new Product.Builder()
+                .withProductName("Baseball Shirt")
+                .withQuantity(1)
+                .build();
         
         return new Order.Builder()
                 .withCustomerName("Fred")
                 .withProduct(p1)
                 .withProduct(p2)
+                .withProduct(p3)
                 .build();
     }
 
