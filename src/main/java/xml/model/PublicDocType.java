@@ -5,6 +5,7 @@ import java.util.Objects;
 public class PublicDocType extends AbstractDocType {
     
     private String dtdName;
+    public final String DOC_TYPE_PREFIX = "PUBLIC";
     
     private PublicDocType(Builder builder) {
         super(builder);

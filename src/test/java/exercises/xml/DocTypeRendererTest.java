@@ -22,6 +22,7 @@ public class DocTypeRendererTest {
                 .build();
         
         String dcType = docType.accept(new DocTypeRenderer());
+        //TODO: error here!
         assertThat(dcType).isEqualTo("PUBLIC \"" + DTD_NAME + "\" \"" + DTD_LOCATION + "\"");
     }
 

@@ -1,7 +1,9 @@
 package xml.model;
 
 public class SystemDocType extends AbstractDocType {
-    
+
+    public final String DOC_TYPE_PREFIX = "SYSTEM";
+
     private SystemDocType(Builder builder) {
         super(builder);
     }

@@ -9,12 +9,12 @@ public class DocTypeRenderer implements DocTypeVisitor<String> {
     @Override
     public String visit(PublicDocType doctype) {
         // TODO - render doc type: PUBLIC "dtdName" "dtdLocation"
-        return null;
+        return doctype.DOC_TYPE_PREFIX + " \"" + doctype.dtdName() + "\" \"" + doctype.dtdLocation() + "\"";
     }
 
     @Override
     public String visit(SystemDocType doctype) {
         // TODO - render doc type: SYSTEM "dtdLocation"
-        return null;
+        return doctype.DOC_TYPE_PREFIX + " \"" + doctype.dtdLocation() + "\"";
     }
 }
